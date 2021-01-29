@@ -1,7 +1,7 @@
 import React, {useState, lazy, Suspense} from 'react';
 import './App.css';
 
-const Popup = lazy(() => import('./components/Popup'));
+const Popup = lazy(() => import(/* webpackPrefetch: true */'./components/Popup'));
 
 function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
